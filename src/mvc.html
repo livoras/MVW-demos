@@ -27,9 +27,9 @@
     <ul>
       {{#each todos}}
       {{#if done}}
-        <li class="done">{{content}}</li>
+        <li class="done" data-index={{@index}}>{{content}}</li>
       {{else}}
-        <li>{{content}}</li>
+        <li data-index={{@index}}>{{content}}</li>
       {{/if}}
       {{/each}}
     </ul>

@@ -1,12 +1,12 @@
-function TodosListController(todosModel) {
-  this.todosModel = todosModel
+function TodosListController(model) {
+  this.model = model
 }
 
 TodosListController.prototype.onCheck = function(index) {
-  var todos = this.todosModel.getTodos()
+  var todos = this.model.getTodos()
   var todo = todos[index]
   todo.done = !todo.done
-  this.todosModel.setTodos(todos)
+  this.model.setTodos(todos)
 }
 
 module.exports = TodosListController

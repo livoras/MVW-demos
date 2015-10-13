@@ -25,13 +25,8 @@ function initList() {
   var todosListController = new TodosListController(todosModel)
   var todosListView = new TodosListView(todosListController, todosModel)
 
-  function buildUI() {
-    todosListView.build()
-    $("#todos-list").html(todosListView.$el)
-  }
-
-  todosModel.on("change", buildUI)
-  buildUI()
+  todosListView.build()
+  $("#todos-list").html(todosListView.$el)
 }
 
 initTodoApp()

@@ -1,11 +1,11 @@
-function TodoInputController(todosModel) {
-  this.todosModel = todosModel
+function TodoInputController(model) {
+  this.model = model
 }
 
 TodoInputController.prototype.onAddNewTodo = function(content) {
-  var todos = this.todosModel.getTodos()
+  var todos = this.model.getTodos()
   todos.unshift({content: content, done: false})
-  this.todosModel.setTodos(todos)
+  this.model.setTodos(todos)
 }
 
 module.exports = TodoInputController
