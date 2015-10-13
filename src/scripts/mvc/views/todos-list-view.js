@@ -13,10 +13,7 @@ TodosListView.prototype.build = function() {
 
 TodosListView.prototype.render = function() {
   var todos = this.model.getTodos()
-  this.$el = $(this.template({
-    todos: todos,
-    sortType: this.sortType
-  }))
+  this.$el = $(this.template({todos: todos}))
 }
 
 TodosListView.prototype.listen = function() {

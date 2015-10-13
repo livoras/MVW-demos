@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script src="lib/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+  <h1>TodosList Demo</h1>
+
+  <div id="todo-app">
+    <div id="todo-input"></div>
+    <div id="todos-list"></div>
+  </div>
+
+  <script id="todo-input-tpl" type="text/template">
+    <div>
+      <input type="text" class="input-todo">
+      <button class="new-todo-btn">新增</button>
+    </div>
+  </script>
+
+  <script id="todos-list-tpl" type="text/template">
+    <ul>
+      {{#each todos}}
+      {{#if done}}
+        <li class="done" data-index={{@index}}>{{content}}</li>
+      {{else}}
+        <li data-index={{@index}}>{{content}}</li>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </script>
+
+  <script src="scripts/mvp.js"></script>
+</body>
+</html>
