@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="todoApp">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body ng-controller="TodoAppController">
+
+  <h1>TodosList Demo</h1>
+
+  <div>
+    <input type="text" class="input-todo" ng-model="newTodoContent">
+    <button class="new-todo-btn" ng-click="addNewTodo()">新增</button>
+  </div>
+
+  <ul>
+    <li ng-repeat="item in todos" 
+        ng-class="{done: item.done}" 
+        ng-click="checkTodo($index)">
+      {{item.content}}
+    </li>
+  </ul>
+
+  <script src="scripts/angular.js"></script>
+</body>
+</html>
