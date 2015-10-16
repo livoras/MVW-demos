@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="todoApp">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+  <div id="app">
+
+    <h1>TodosList Demo</h1>
+
+    <div>
+      <input type="text" class="input-todo" v-model="newTodoContent">
+      <button class="new-todo-btn" v-on="click: addNewTodo">新增</button>
+    </div>
+
+    <ul>
+      <li v-repeat="todos" 
+          v-class="done: done" 
+          v-on="click: checkTodo($index)">
+        {{content}}
+      </li>
+    </ul>
+
+  </div>
+
+  <script src="scripts/mvvm.js"></script>
+</body>
+</html>

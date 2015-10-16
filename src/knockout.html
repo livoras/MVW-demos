@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="todoApp">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+  <div id="app">
+    
+    <h1>TodosList Demo</h1>
+
+    <div>
+      <input type="text"class="input-todo"
+        data-bind="
+          value: newTodoContent,
+          valueUpdate: 'input'
+        "/>
+      <!--<div data-bind="text: newTodoContent"></div>-->
+
+      <button class="new-todo-btn"
+        data-bind="click: addNewTodo">新增</button>
+    </div>
+
+    <ul data-bind="foreach: todos">
+      <li 
+        data-bind="
+          text: content,
+          css: {done: done},
+          click: $root.checkTodo
+        "></li>
+    </ul>
+
+  </div>
+
+  <script src="scripts/knockout.js"></script>
+</body>
+</html>
