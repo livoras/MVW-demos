@@ -3,7 +3,7 @@ var angular = require("angular")
 angular.module("todoApp", [])
 
 .controller("TodoAppController", ["$scope", function($scope) {
-  $scope.newTodoContent = "Nothing"
+  $scope.newTodoContent = ""
   $scope.todos = [{content: "Make PPT!", done: false}]
 
   $scope.addNewTodo = function() {
@@ -15,5 +15,5 @@ angular.module("todoApp", [])
   $scope.checkTodo = function(i) {
     $scope.todos[i].done = !$scope.todos[i].done
   }
-  
+
 }])
