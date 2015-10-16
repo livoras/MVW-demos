@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script src="lib/backbone.js"></script>
+</head>
+<body>
+
+  <h1>TodosList Demo</h1>
+
+  <div id="todo-app">
+  </div>
+
+  <script type="text/template" id="todo-app-tpl">
+    <div>
+      <input type="text" class="input-todo"/>
+      <button class="new-todo-btn">新增</button>
+    </div>
+    <ul></ul>
+  </script>
+
+  <script type="text/template" id="todo-tpl">
+    {{#if done}}
+      <li class="done" data-index={{@index}}>{{content}}</li>
+    {{else}}
+      <li data-index={{@index}}>{{content}}</li>
+    {{/if}}
+  </script>
+
+  <script src="scripts/backbone.js"></script>
+</body>
+</html>
