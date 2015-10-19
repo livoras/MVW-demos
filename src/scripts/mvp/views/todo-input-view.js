@@ -1,8 +1,7 @@
 var Handlebars = require("handlebars")
 
-function TodoInputView(model) {
+function TodoInputView() {
   this.presenter = null
-  this.model = model
   this.template = Handlebars.compile($("#todo-input-tpl").html())
 }
 
